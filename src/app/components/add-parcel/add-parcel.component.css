@@ -1,0 +1,9 @@
+.submit-form {
+    max-width: auto;
+  }
+
+.form-group {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-style: italic;
+  }

@@ -1,0 +1,5 @@
+.custom-placeholder::placeholder {
+    color: #D9D9D9; /* Replace #YourColorCode with the color you want */
+    opacity: 1; /* Optional: Adjust the opacity as needed */
+    font-style: italic;
+}

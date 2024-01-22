@@ -1,0 +1,4 @@
+.custom-placeholder::placeholder {
+    color: #C5C5C5;
+    /* Change this to your desired color */
+}
