@@ -1,2 +1,77 @@
-<p>view-parcel works!</p>
-    
+<app-header></app-header>
+
+<!-- VIEW PARCEL BODY -->
+
+<div id="parcel-details" class="row align-items-center" style="padding-left: 120px; padding-right: 100px; padding-top: 100px; font-family: 'Poppins', sans-serif;">
+  <a href="/index" class="btn mb-3 fw-bold fs-4" style="background-color: #FF0A0A; color: #FFFFFF; border-radius: 20px; width: 200px;">Go Back</a>
+</div>
+
+<div class="row align-items-center justify-content-center" style="padding-left: 120px; padding-right: 100px; padding-bottom: 100px; border-radius: 50px; font-family: 'Poppins', sans-serif;">
+  
+  <!-- Form Section -->
+<div class="col-md-8 mt-5 mb-5">
+    <div class="view-form fw-1 row">
+      <!-- First Column -->
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <label for="tracking_code" class="fw-bold fs-3">Tracking Code:</label>
+          <p id="tracking_code" class="form-control-plaintext">{{ currentParcel?.tracking_code }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="parcel_type" class="fw-bold fs-3">Parcel Type:</label>
+          <p id="parcel_type" class="form-control-plaintext">{{ currentParcel?.parcel_type }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="sender" class="fw-bold fs-3">Sender:</label>
+          <p id="sender" class="form-control-plaintext">{{ currentParcel?.sender }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="sender_contact" class="fw-bold fs-3">Sender Contact Number:</label>
+          <p id="sender_contact" class="form-control-plaintext">{{ currentParcel?.sender_contact }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="sender_address" class="fw-bold fs-3">Sender Address:</label>
+          <p id="sender_address" class="form-control-plaintext">{{ currentParcel?.sender_address }}</p>
+        </div>
+      </div>
+  
+      <!-- Second Column -->
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <label for="receiver" class="fw-bold fs-3">Receiver:</label>
+          <p id="receiver" class="form-control-plaintext">{{ currentParcel?.receiver }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="receiver_contact" class="fw-bold fs-3">Receiver Contact Number:</label>
+          <p id="receiver_contact" class="form-control-plaintext">{{ currentParcel?.receiver_contact }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="receiver_address" class="fw-bold fs-3">Receiver Address:</label>
+          <p id="receiver_address" class="form-control-plaintext">{{ currentParcel?.receiver_address }}</p>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="status" class="fw-bold fs-3">Status:</label>
+          <p id="status" class="form-control-plaintext">{{ currentParcel?.status }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success fw-bold fs-4"  style="border-radius: 20px; width: 300px; margin-top: 20px;">Print Receipt</button>
+  </div>
+  
+
+  <!-- Image Section -->
+  <div class="col-md-4 text-center">
+    <img src="./assets/imgs/view_parcel_logo.svg" alt="View Parcel Logo">
+    <h1 class="text-center" style="font-family: 'Racing Sans One', sans-serif;"><span style="color: #FF0A0A;">View</span> Parcel</h1>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

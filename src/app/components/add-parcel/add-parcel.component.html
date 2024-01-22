@@ -1,6 +1,6 @@
 
 <div class="row align-items-center "  style="padding-left: 120px; padding-right: 100px; padding-top: 100px; font-family: 'Poppins', sans-serif;">
-  <a href="/index" class="btn mb-3 fw-bold" style="background-color: #FF0A0A; color: #FFFFFF; border-radius: 20px; width: 150px; ">Go Back</a>
+  <a href="/index" class="btn mb-3 fw-bold fs-4" style="background-color: #FF0A0A; color: #FFFFFF; border-radius: 20px; width: 200px; ">Go Back</a>
 </div>
 
 <div class="row align-items-center justify-content-center" style="padding-left: 120px; padding-right: 100px; padding-bottom: 100px; border-radius: 50px; ; font-family: 'Poppins', sans-serif;">
@@ -8,7 +8,7 @@
     <img src="./assets/imgs/add_parcel_logo.svg" alt="Add Parcel Logo">
     <h1 class="text-center" style="font-family: 'Racing Sans One', sans-serif;"><span style="color: #FF0A0A;">Add</span> Parcel</h1>
 </div>
-  <div class="col-md-8">
+  <div class="col-md-8 mt-4">
     <div class="submit-form fw-1">
       <div *ngIf="!submitted">
         <div class="form-group">
@@ -123,7 +123,7 @@
     
         <!-- Add similar input fields for the rest of the Parcel properties -->
     
-        <button (click)="saveParcel()" class="btn btn-success fw-bold" style=" border-radius: 20px; width: 150px;">Submit</button>
+        <button (click)="saveParcel()" class="btn btn-success fw-bold fs-4 mt-4" style=" border-radius: 20px; width: 300px;">Submit</button>
         
       </div>
       <div *ngIf="submitted">

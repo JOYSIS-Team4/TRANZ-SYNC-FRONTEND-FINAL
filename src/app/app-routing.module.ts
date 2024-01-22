@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'home', component: LandingPageComponent},
   { path: 'index', component: GetAllParcelsComponent},
   { path: 'add-parcel', component: AdminComponent },
-  { path: 'view-parcel', component: ViewParcelComponent },
-  { path: 'update-parcel', component: UpdateParcelComponent}
+  { path: 'view-parcel/:id', component: ViewParcelComponent },
+  { path: 'update-parcel/:id', component: UpdateParcelComponent}
   
 ];
 

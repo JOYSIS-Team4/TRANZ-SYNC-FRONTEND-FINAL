@@ -28,10 +28,10 @@
             <a class="btn btn-lg fs-4" href="/add-parcel" style="font-family: 'Racing Sans One', sans-serif; width: 250px; background-color: #FF0A0A; color: #FFFFFF; border-radius: 30px; margin-bottom: 20px;">Add Parcel</a>
         </div>
         <div class="col-md-4 text-end">
-            <input type="search" class="form-control" placeholder="Search">
+            <input type="search" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" (ngModelChange)="searchParcels()">
         </div>
     </div>
-    <table class="table">
+    <table class="table" style="font-family: 'Poppins', sans-serif; ">
         <thead>
             <tr>
                 <th>Parcel ID</th>
@@ -44,9 +44,23 @@
             </tr>
         </thead>
         <tbody>
-            
+          <tr *ngFor="let parcel of parcels">
+            <td>{{ parcel.parcel_id }}</td>
+            <td>{{ parcel.tracking_code }}</td>
+            <td>{{ parcel.parcel_type }}</td>
+            <td>{{ parcel.sender }}</td>
+            <td>{{ parcel.receiver }}</td>
+            <td>{{ parcel.status }}</td>
+            <td>
+              <button class="btn btn-primary btn-sm button-spacing" style="margin-right: 10px;" [routerLink]="['/view-parcel', parcel.parcel_id]">View</button>
+              <button class="btn btn-secondary btn-sm button-spacing"  style="margin-right: 10px;" [routerLink]="['/update-parcel', parcel.parcel_id]">Update</button>
+              <button class="btn btn-danger btn-sm button-spacing"  style="margin-right: 10px;" *ngIf="parcel.parcel_id" (click)="delete(parcel.parcel_id)">Delete</button>
+              <button class="btn btn-info btn-sm" (click)="printReceipt(parcel)">Print Receipt</button>
+            </td>
+          </tr>
         </tbody>
     </table>
+    
     
 </div>
 <app-footer></app-footer>

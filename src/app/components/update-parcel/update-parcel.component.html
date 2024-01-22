@@ -3,7 +3,7 @@
 <!-- UPDATE PARCEL BODY -->
 
 <div class="row align-items-center" style="padding-left: 120px; padding-right: 100px; padding-top: 100px; font-family: 'Poppins', sans-serif;">
-    <a href="/index" class="btn mb-3 fw-bold" style="background-color: #FF0A0A; color: #FFFFFF; border-radius: 20px; width: 150px;">Go Back</a>
+    <a href="/index" class="btn mb-3 fw-bold fs-4" style="background-color: #FF0A0A; color: #FFFFFF; border-radius: 20px; width: 200px;">Go Back</a>
   </div>
   
   <div class="row align-items-center justify-content-center" style="padding-left: 120px; padding-right: 100px; padding-bottom: 100px; border-radius: 50px; font-family: 'Poppins', sans-serif;">
@@ -11,8 +11,8 @@
       <img src="./assets/imgs/update_parcel_logo.svg" alt="Update Parcel Logo">
       <h1 class="text-center" style="font-family: 'Racing Sans One', sans-serif;"><span style="color: #FF0A0A;">Update</span> Parcel</h1>
     </div>
-    <div class="col-md-8">
-      <div class="submit-form fw-1">
+    <div class="col-md-8 mt-3">
+      <div class="submit-form fw-1" *ngIf="parcel">
         <!-- <div *ngIf="!submitted"> -->
             <div class="form-group">
                 <label for="tracking_code">Tracking Code:</label>
@@ -21,7 +21,7 @@
                   class="form-control"
                   id="tracking_code"
                   required
-                  
+                  [(ngModel)]="parcel.tracking_code"
                   name="tracking_code"
                 />
               </div>
@@ -33,7 +33,7 @@
                   class="form-control"
                   id="parcel_type"
                   required
-                  
+                  [(ngModel)]="parcel.parcel_type"
                   name="parcel_type"
                 />
               </div>
@@ -45,7 +45,7 @@
                     class="form-control"
                     id="sender"
                     required
-                    
+                    [(ngModel)]="parcel.sender"
                     name="sender"
                   />
                 </div>
@@ -57,7 +57,7 @@
                     class="form-control"
                     id="sender_contact"
                     required
-                    
+                    [(ngModel)]="parcel.sender_contact"
                     name="sender_contact"
                   />
                 </div>
@@ -69,7 +69,7 @@
                     class="form-control"
                     id="sender_address"
                     required
-                    
+                    [(ngModel)]="parcel.sender_address"
                     name="sender_address"
                   />
                 </div>
@@ -81,7 +81,7 @@
                     class="form-control"
                     id="receiver"
                     required
-                    
+                    [(ngModel)]="parcel.receiver"
                     name="receiver"
                   />
                 </div>
@@ -93,7 +93,7 @@
                     class="form-control"
                     id="receiver_contact"
                     required
-                    
+                    [(ngModel)]="parcel.receiver_contact"
                     name="receiver_contact"
                   />
                 </div>
@@ -105,7 +105,7 @@
                     class="form-control"
                     id="receiver_address"
                     required
-                    
+                    [(ngModel)]="parcel.receiver_address"
                     name="receiver_address"
                   />
                 </div>
@@ -117,22 +117,22 @@
                     class="form-control"
                     id="status"
                     required
-                    
+                    [(ngModel)]="parcel.status"
                     name="status"
                   />
                 </div>
       
           <!-- Additional form fields commented similarly -->
   
-          <button class="btn btn-success fw-bold" style="border-radius: 20px; width: 150px;">Update</button>
+          <button class="btn btn-success fw-bold fs-4 mt-4" style="border-radius: 20px; width: 300px;" (click)="updateParcel()">Update</button>
           
-        <!-- </div> -->
-        <!-- <div *ngIf="submitted"> -->
-          <!-- <h4>Parcel was updated successfully!</h4> -->
-        <!-- </div> -->
+
       </div>
+
     </div>
   </div>
-  
+
 
 <app-footer></app-footer>
+
+

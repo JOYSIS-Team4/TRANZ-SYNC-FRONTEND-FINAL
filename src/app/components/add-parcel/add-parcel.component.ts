@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Parcel } from '../../models/parcel.model';
+import { Parcel } from '../../services/models/parcel.model';
 import { ParcelService } from '../../services/parcel.service';
 
 @Component({
